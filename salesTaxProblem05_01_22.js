@@ -4,9 +4,15 @@ const prompt = require('prompt');
 
 prompt.start();
 
+function onErr(err) {
+  console.log(err);
+  return 1;
+}
+
 prompt.get(['item1', 'item2', 'item3', 'item4'], (err, result) => {
   if (err) {
-    console.log(err);
+    // console.log(err);
+    return onErr(err);
   }
   const response = {};
   let saleTax = 0;
@@ -47,5 +53,6 @@ prompt.get(['item1', 'item2', 'item3', 'item4'], (err, result) => {
   response['Sales Taxes'] = saleTax.toFixed(2);
   response.Total = total.toFixed(2);
   console.log(response);
+  return 1;
   // console.log('item1 is', result.item2);
 });
