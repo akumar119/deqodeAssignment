@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel ./src/server.js -d dist",
     "start": "npm run build && nodemon dist/server.js",
-    "test": "jest"
+    "test": "jest --watch"
   },
   "author": "\"amit\"",
   "license": "ISC",
