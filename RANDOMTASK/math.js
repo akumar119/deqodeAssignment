@@ -13,8 +13,19 @@ const celsiusToFahrenheit = (temp) => {
   return result;
 };
 
+const add = async (a, b) => {
+  setTimeout(() => {
+    if (a < 0 || b < 0) {
+      throw new Error('a and b must be positive.');
+    } else {
+      return a + b;
+    }
+  }, 2000);
+};
+
 module.exports = {
   calculateTip,
   fahrenheitToCelsius,
   celsiusToFahrenheit,
+  add,
 };

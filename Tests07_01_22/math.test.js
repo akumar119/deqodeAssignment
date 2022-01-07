@@ -1,6 +1,8 @@
 /* eslint-disable no-undef */
 // eslint-disable-next-line no-undef
-const { calculateTip, fahrenheitToCelsius, celsiusToFahrenheit } = require('../RANDOMTASK/math');
+const {
+  calculateTip, fahrenheitToCelsius, celsiusToFahrenheit, add,
+} = require('../RANDOMTASK/math');
 
 test('should calculate total with tip', () => {
   const total = calculateTip(10, 0.3);
@@ -20,6 +22,11 @@ test('should convert firenheit to celcius', () => {
 test('should convert celcius to farenheit', () => {
   const temp = celsiusToFahrenheit(0);
   expect(temp).toBe(32);
+});
+// failed test case
+test('add function', async () => {
+  const sum = await add(10, 20);
+  expect(sum).toBe(30);
 });
 
 // test('firstTest', () => {
