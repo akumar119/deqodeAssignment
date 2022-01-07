@@ -4,22 +4,30 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "build": "babel server.js -d dist",
-    "start": "npm run build && nodemon dist/server.js"
+    "build": "babel ./src/server.js -d dist",
+    "start": "npm run build && nodemon dist/server.js",
+    "test": "jest"
   },
   "author": "\"amit\"",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.2",
+    "mongoose": "^6.1.5",
     "prompt": "^1.2.0",
     "request": "^2.88.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.7",
     "@babel/core": "^7.16.7",
+    "@babel/node": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.16.7",
+    "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.16.7",
+    "@babel/runtime": "^7.16.7",
     "eslint": "^8.6.0",
     "eslint-config-airbnb-base": "^15.0.0",
+    "jest": "^27.4.7",
     "nodemon": "^2.0.15"
   }
 }

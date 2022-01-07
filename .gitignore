@@ -4,17 +4,11 @@
 # .idea folder
 .idea
 
-# .eslint
-.eslintrc.json
-
-#.babelrc
-.babelrc
 
 #dist
 dist
 
 #output
-output
 # Documentation (moved to drive.google.com)
 docs/*.docx
 
