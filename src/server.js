@@ -10,6 +10,7 @@ require('dotenv').config();
 const PORT = process.env.PORT || 8001;
 
 const app = express();
+app.use(express.json());
 app.use(userRouter);
 app.listen(PORT, () => {
 // no-console
