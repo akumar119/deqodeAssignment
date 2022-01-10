@@ -17,6 +17,8 @@
     "bcrypt": "^5.0.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.2",
+    "express-joi-validation": "^5.0.1",
+    "joi": "^17.5.0",
     "mongoose": "^6.1.5",
     "prompt": "^1.2.0",
     "request": "^2.88.2",
