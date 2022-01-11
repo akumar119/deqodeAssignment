@@ -26,7 +26,7 @@ for (let i = 0; i < 4; i++) {
       const data = JSON.stringify(parseBody.data);
       const timeStamps = new Date().toISOString().replaceAll(':', '');
       const fileName = `${timeStamps}_employee_${i + 1}.txt`;
-      fs.writeFileSync(`./output/${fileName}`, data, (err) => {
+      fs.writeFileSync(`../output/${fileName}`, data, (err) => {
         if (err) {
           console.error(err);
         } else {

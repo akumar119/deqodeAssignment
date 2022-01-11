@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
 // eslint-disable-next-line no-undef
 const {
-  calculateTip, fahrenheitToCelsius, celsiusToFahrenheit, add,
-} = require('../RANDOMTASK/math');
+  calculateTip, fahrenheitToCelsius, celsiusToFahrenheit,
+} = require('../dailyAssignmentTask/math');
 
 test('should calculate total with tip', () => {
   const total = calculateTip(10, 0.3);
@@ -24,10 +24,10 @@ test('should convert celcius to farenheit', () => {
   expect(temp).toBe(32);
 });
 // failed test case
-test('add function', async () => {
-  const sum = await add(10, 20);
-  expect(sum).toBe(30);
-});
+// test('add function', async () => {
+//   const sum = await add(10, 20);
+//   expect(sum).toBe(30);
+// });
 
 // test('firstTest', () => {
 

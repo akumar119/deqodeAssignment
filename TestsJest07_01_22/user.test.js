@@ -1,9 +1,9 @@
 /* eslint-disable no-undef */
-const supertest = require('supertest');
-const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
-const app = require('../src/app');
-const User = require('../Model/user');
+import supertest from 'supertest';
+import mongoose from 'mongoose';
+import bcrypt from 'bcrypt';
+import app from '../src/app';
+import User from '../Model/user';
 
 const userOne = {
   _id: new mongoose.Types.ObjectId(),
