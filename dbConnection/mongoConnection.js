@@ -1,7 +1,5 @@
-// import mongoose from 'mongoose';
-// import config from '../config/db_config';
-const mongoose = require('mongoose');
-const config = require('../config/db_config');
+import mongoose from 'mongoose';
+import config from '../config/db_config';
 
 const dbUrl = config.MONGO_URI;
 

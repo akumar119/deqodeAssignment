@@ -1,8 +1,8 @@
-const bcrypt = require('bcrypt');
-const User = require('../Model/user');
+import bcrypt from 'bcrypt';
+import User from '../Model/user';
 
 // make api just for jest testing on api
-const userSignup = async (req, res) => {
+export const userSignup = async (req, res) => {
   try {
     if (req.body && req.body.password) {
       const password = await bcrypt.hash(req.body.password, 8);
@@ -17,7 +17,7 @@ const userSignup = async (req, res) => {
   }
 };
 
-const userLogin = async (req, res) => {
+export const userLogin = async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });
 
@@ -32,9 +32,4 @@ const userLogin = async (req, res) => {
   } catch (err) {
     res.status(400).send(err);
   }
-};
-
-module.exports = {
-  userSignup,
-  userLogin,
 };

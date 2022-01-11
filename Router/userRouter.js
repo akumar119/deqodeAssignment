@@ -1,9 +1,7 @@
-// import express from 'express';
-// import userController from '../Controller/userController'
+import express from 'express';
+import { userSignup, userLogin } from '../Controller/userController';
 
-const express = require('express');
 const validator = require('express-joi-validation').createValidator({});
-const userController = require('../Controller/userController');
 const userValidator = require('./userValidator');
 
 const router = express.Router();
@@ -14,10 +12,10 @@ router.get('/', (req, res) => {
 });
 
 // make this api just for jest testing
-router.post('/user/signup', validator.body(userValidator.signupUser), userController.userSignup);
+router.post('/user/signup', validator.body(userValidator.signupUser), userSignup);
 
 // makes this api just for jest testing
-router.post('/user/login', validator.body(userValidator.loginUser), userController.userLogin);
+router.post('/user/login', validator.body(userValidator.loginUser), userLogin);
 
 // eslint-disable-next-line import/prefer-default-export
-module.exports = router;
+export default router;
