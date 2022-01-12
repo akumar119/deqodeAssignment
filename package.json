@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel ./src/server.js ./src/app.js -d dist",
     "start": "nodemon --exec babel-node ./src/server.js",
-    "test": "mocha"
+    "test": "./node_modules/.bin/mocha --require @babel/register"
   },
   "jest": {
     "testEnvironment": "node"
@@ -31,8 +31,10 @@
     "@babel/plugin-transform-runtime": "^7.16.7",
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.16.7",
+    "@babel/register": "^7.16.8",
     "@babel/runtime": "^7.16.7",
     "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
     "eslint": "^8.6.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "jest": "^27.4.7",
