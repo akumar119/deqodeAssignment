@@ -13,4 +13,8 @@ module.exports = {
       .required(),
     password: Joi.string().min(5).required(),
   }),
+  listUser: Joi.object({
+    skip: Joi.number().min(0).optional().description('set skip for pagination.'),
+    limit: Joi.number().min(0).optional().description('set limit for pagination.'),
+  }),
 };
