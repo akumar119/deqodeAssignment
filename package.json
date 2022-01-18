@@ -6,7 +6,8 @@
   "scripts": {
     "build": "babel ./src/server.js ./src/app.js -d dist",
     "start": "nodemon --exec babel-node ./src/server.js",
-    "test": "./node_modules/.bin/mocha --require @babel/register"
+    "test": "./node_modules/.bin/mocha --require @babel/register",
+    "jest": "jest --watch"
   },
   "jest": {
     "testEnvironment": "node"
@@ -16,11 +17,14 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
     "express": "^4.17.2",
     "express-joi-validation": "^5.0.1",
     "joi": "^17.5.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.5",
+    "passport": "^0.5.2",
+    "passport-facebook": "^3.0.0",
     "prompt": "^1.2.0",
     "request": "^2.88.2",
     "supertest": "^6.1.6"
