@@ -23,16 +23,14 @@ router.post('/user/login', validator.body(userValidator.loginUser), userLogin);
 router.get('/user/list', validator.query(userValidator.listUser), userList);
 
 /**
- *  ADD NEW CODE FOR FACEBOOK LOGIN
+ *  ADD NEW CODE FOR FACEBOOK LOGIN -------------------------------------\\
  */
 // route middleware to make sure a user is logged in
 // eslint-disable-next-line consistent-return
 function isLoggedIn(req, res, next) {
-  // if user is authenticated in the session, carry on
   if (req.isAuthenticated()) {
     return next();
-  }
-  // if they aren't redirect them to the home page
+  }// <-- typo here
   res.redirect('/');
 }
 // route for home page
@@ -75,8 +73,20 @@ router.get('/logout', (req, res) => {
   res.redirect('/');
 });
 /**
- * END
+ * *************************************END**********************************\
  */
+/**
+ * *********************************GOOGLE LOGIN ****************************\
+ */
+router.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
+
+router.get(
+  '/auth/google/callback',
+  passport.authenticate('google', { failureRedirect: '/' }),
+  (req, res) => {
+    res.redirect('/profile');
+  },
+);
 
 // eslint-disable-next-line import/prefer-default-export
 export default router;

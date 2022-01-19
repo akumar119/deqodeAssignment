@@ -3,6 +3,8 @@
     "rules": {
         "no-console":"off",
         "linebreak-style":"off",
-        "no-plusplus":"off"
+        "no-plusplus":"off",
+        "consistent-return":"off",
+        "max-len":"off"
     }
 }
