@@ -22,5 +22,6 @@ function Calculator() {
 }
 
 const obj1 = new Calculator();
-
+obj1.read();
 console.log(obj1.sum());
+console.log(obj1.multiply());
