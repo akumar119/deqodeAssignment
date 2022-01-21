@@ -5,6 +5,8 @@
         "linebreak-style":"off",
         "no-plusplus":"off",
         "consistent-return":"off",
-        "max-len":"off"
+        "max-len":"off",
+        "arrow-body-style":"off",
+        "func-names":"off"
     }
 }
