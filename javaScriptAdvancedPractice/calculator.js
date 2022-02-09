@@ -7,11 +7,11 @@ function Calculator() {
   let number1;
   let number2;
   this.read = async function () {
-    const { num1, num2 } = await prompt.get(['firstNumber', 'secondNumber']);
-    number1 = num1;
-    number2 = num2;
-    console.log('first number is>>>>>', num1);
-    console.log('second number is>>>>>', num2);
+    const { firstNumber, secondNumber } = await prompt.get(['firstNumber', 'secondNumber']);
+    number1 = firstNumber;
+    number2 = secondNumber;
+    // console.log('first number is>>>>>', num1);
+    // console.log('second number is>>>>>', num2);
   };
   this.sum = function () {
     return number1 + number2;
@@ -23,5 +23,5 @@ function Calculator() {
 
 const obj1 = new Calculator();
 obj1.read();
-console.log(obj1.sum());
-console.log(obj1.multiply());
+// console.log(obj1.sum());
+// console.log(obj1.multiply());

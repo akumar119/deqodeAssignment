@@ -43,3 +43,35 @@
 // const sqre1 = new Square(3);
 
 // console.log(sqre1.area());
+
+// const arr = [1, 6, 4, 2, 3];
+
+// Array.prototype.sortArray = function() {
+
+//     let n = this.length;
+//     for(let i=0; i<n-1; i++) {  // pass
+//         let swapped = false;
+//         for(let j=0; j<n-1-i; j++) { //compari
+
+//             if(this[j]> this[j+1])
+//             {
+//               let temp = this[j];
+//               this[j] = this[j+1];
+//               this[j+1] = temp;
+//               swapped = true;
+//             }
+//         }
+//         if(swapped === false) {
+//             break;
+//         }
+//     }
+//     return this;
+// }
+
+// console.log(arr.sortArray());
+const waitFor = (ms) => new Promise(r => setTimeout(r, ms));
+[1, 2, 3].forEach(async (num) => {
+  await waitFor(50);
+  console.log(num);
+});
+console.log('Done');
